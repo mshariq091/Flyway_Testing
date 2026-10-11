@@ -1,0 +1,25 @@
+databaseType = "Snowflake"
+id = "e7d17a5c-15c2-4382-b44f-c99932371387"
+name = "Snowflake_RLS_Lab"
+
+[flyway]
+callbackLocations = [ "filesystem:callbacks" ]
+locations = [ "filesystem:migrations" ]
+mixed = true
+outOfOrder = true
+schemaModelLocation = "schema-model"
+validateMigrationNaming = true
+defaultSchema = "DATA"
+createSchemas = true
+
+[flywayDesktop]
+developmentEnvironment = "development"
+shadowEnvironment = "shadow"
+showDeploymentDecision = true
+
+[redgateCompare]
+filterFile = "filter.rgf"
+
+[environments.target1]
+url = "jdbc:snowflake://mamtfzc-an14566.snowflakecomputing.com/?db=RLS_LAB&warehouse=SNOWFLAKE_LEARNING_WH&schema=DATA&JDBC_QUERY_RESULT_FORMAT=JSON"
+displayName = "Snowflake_RLS_Lab"
