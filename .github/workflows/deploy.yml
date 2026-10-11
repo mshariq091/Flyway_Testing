@@ -3,7 +3,7 @@ name: Deploy Snowflake SQL
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'migrations/**'
       - '.github/workflows/deploy.yml'
